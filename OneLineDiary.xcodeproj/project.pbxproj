@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		8B7F12E72A773A68006A6B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12E62A773A68006A6B39 /* AppDelegate.swift */; };
 		8B7F12E92A773A68006A6B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12E82A773A68006A6B39 /* SceneDelegate.swift */; };
-		8B7F12EB2A773A68006A6B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12EA2A773A68006A6B39 /* ViewController.swift */; };
+		8B7F12EB2A773A68006A6B39 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12EA2A773A68006A6B39 /* AddViewController.swift */; };
 		8B7F12EE2A773A68006A6B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F12EC2A773A68006A6B39 /* Main.storyboard */; };
 		8B7F12F02A773A69006A6B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F12EF2A773A69006A6B39 /* Assets.xcassets */; };
 		8B7F12F32A773A69006A6B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F12F12A773A69006A6B39 /* LaunchScreen.storyboard */; };
+		8B7F12FB2A773ACF006A6B39 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12FA2A773ACF006A6B39 /* DiaryTableViewController.swift */; };
+		8B7F12FE2A773BC4006A6B39 /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12FC2A773BC4006A6B39 /* DiaryTableViewCell.swift */; };
+		8B7F12FF2A773BC4006A6B39 /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F12FD2A773BC4006A6B39 /* DiaryTableViewCell.xib */; };
+		8B7F13032A775383006A6B39 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F13022A775383006A6B39 /* DetailViewController.swift */; };
+		8B7F13052A776257006A6B39 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F13042A776257006A6B39 /* Extension+UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B7F12E32A773A68006A6B39 /* OneLineDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLineDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7F12E62A773A68006A6B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B7F12E82A773A68006A6B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B7F12EA2A773A68006A6B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B7F12EA2A773A68006A6B39 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8B7F12ED2A773A68006A6B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B7F12EF2A773A69006A6B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B7F12F22A773A69006A6B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B7F12F42A773A69006A6B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7F12FA2A773ACF006A6B39 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
+		8B7F12FC2A773BC4006A6B39 /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
+		8B7F12FD2A773BC4006A6B39 /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
+		8B7F13022A775383006A6B39 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8B7F13042A776257006A6B39 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +68,13 @@
 			children = (
 				8B7F12E62A773A68006A6B39 /* AppDelegate.swift */,
 				8B7F12E82A773A68006A6B39 /* SceneDelegate.swift */,
-				8B7F12EA2A773A68006A6B39 /* ViewController.swift */,
+				8B7F12EA2A773A68006A6B39 /* AddViewController.swift */,
 				8B7F12EC2A773A68006A6B39 /* Main.storyboard */,
+				8B7F12FC2A773BC4006A6B39 /* DiaryTableViewCell.swift */,
+				8B7F12FD2A773BC4006A6B39 /* DiaryTableViewCell.xib */,
+				8B7F12FA2A773ACF006A6B39 /* DiaryTableViewController.swift */,
+				8B7F13042A776257006A6B39 /* Extension+UIViewController.swift */,
+				8B7F13022A775383006A6B39 /* DetailViewController.swift */,
 				8B7F12EF2A773A69006A6B39 /* Assets.xcassets */,
 				8B7F12F12A773A69006A6B39 /* LaunchScreen.storyboard */,
 				8B7F12F42A773A69006A6B39 /* Info.plist */,
@@ -128,6 +143,7 @@
 				8B7F12F32A773A69006A6B39 /* LaunchScreen.storyboard in Resources */,
 				8B7F12F02A773A69006A6B39 /* Assets.xcassets in Resources */,
 				8B7F12EE2A773A68006A6B39 /* Main.storyboard in Resources */,
+				8B7F12FF2A773BC4006A6B39 /* DiaryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B7F12EB2A773A68006A6B39 /* ViewController.swift in Sources */,
+				8B7F12EB2A773A68006A6B39 /* AddViewController.swift in Sources */,
+				8B7F13052A776257006A6B39 /* Extension+UIViewController.swift in Sources */,
+				8B7F12FE2A773BC4006A6B39 /* DiaryTableViewCell.swift in Sources */,
+				8B7F12FB2A773ACF006A6B39 /* DiaryTableViewController.swift in Sources */,
+				8B7F13032A775383006A6B39 /* DetailViewController.swift in Sources */,
 				8B7F12E72A773A68006A6B39 /* AppDelegate.swift in Sources */,
 				8B7F12E92A773A68006A6B39 /* SceneDelegate.swift in Sources */,
 			);
