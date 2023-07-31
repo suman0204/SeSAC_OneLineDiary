@@ -17,8 +17,11 @@ class AddViewController: UIViewController {
         title = "추가 화면"
         
         let xmark = UIImage(systemName: "xmark")
-        navigationItem.leftBarButtonItem?.tintColor = .black
+        
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: xmark, style: .plain, target: self, action: #selector(closeButtonClicked))
+        
+        navigationItem.leftBarButtonItem?.tintColor = .black
         
     }
 

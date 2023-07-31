@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +49,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrf-Fi-A70">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rXm-3i-1Hd"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="삭제" id="vHs-Jd-tFt">
                                         <connections>
@@ -59,19 +63,67 @@
                                     <barButtonItem title="Item" id="23U-25-jqB"/>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKF-Y6-f0o">
+                                <rect key="frame" x="30" y="89" width="333" height="655"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S07-rw-9iS"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="rrf-Fi-A70" firstAttribute="top" secondItem="cKF-Y6-f0o" secondAttribute="bottom" constant="30" id="6E0-AU-kta"/>
                             <constraint firstItem="rrf-Fi-A70" firstAttribute="bottom" secondItem="S07-rw-9iS" secondAttribute="bottom" id="BYm-kC-s8f"/>
                             <constraint firstItem="rrf-Fi-A70" firstAttribute="trailing" secondItem="S07-rw-9iS" secondAttribute="trailing" id="Eqv-9W-RwY"/>
+                            <constraint firstItem="cKF-Y6-f0o" firstAttribute="leading" secondItem="S07-rw-9iS" secondAttribute="leading" constant="30" id="G0G-kj-DAn"/>
                             <constraint firstItem="rrf-Fi-A70" firstAttribute="leading" secondItem="S07-rw-9iS" secondAttribute="leading" id="Spm-f3-2Rd"/>
+                            <constraint firstItem="cKF-Y6-f0o" firstAttribute="top" secondItem="S07-rw-9iS" secondAttribute="top" constant="30" id="az4-Br-UVD"/>
+                            <constraint firstItem="S07-rw-9iS" firstAttribute="trailing" secondItem="cKF-Y6-f0o" secondAttribute="trailing" constant="30" id="pjw-t4-5C5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentsLabel" destination="cKF-Y6-f0o" id="0Cs-1P-70N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emQ-kr-eAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1873" y="749"/>
+        </scene>
+        <!--Search Collection View Controller-->
+        <scene sceneID="Qkn-FP-aGd">
+            <objects>
+                <collectionViewController storyboardIdentifier="SearchCollectionViewController" id="RfT-ZO-cXU" customClass="SearchCollectionViewController" customModule="OneLineDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ESO-yk-drU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mjg-Ze-Nnx">
+                            <size key="itemSize" width="172" height="257"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eXl-Ac-MVT">
+                                <rect key="frame" x="0.0" y="0.0" width="172" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gGB-4O-nwb">
+                                    <rect key="frame" x="0.0" y="0.0" width="172" height="257"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="172" height="257"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="RfT-ZO-cXU" id="7Az-Jx-vEj"/>
+                            <outlet property="delegate" destination="RfT-ZO-cXU" id="Tz0-Ew-IAb"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSl-9O-k0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2829.770992366412" y="748.59154929577471"/>
         </scene>
         <!--Diary Table View Controller-->
         <scene sceneID="N5O-TF-64v">
@@ -97,6 +149,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Nuu-Cr-Haw">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="7e8-Zc-Uus">
+                            <connections>
+                                <action selector="searchBarButtonItemClicked:" destination="gk4-xy-Mhr" id="bkN-Ha-Jx3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BIR-JF-LTn">
                             <connections>
                                 <action selector="addBarButtonItemClicked:" destination="gk4-xy-Mhr" id="VSg-Tx-63r"/>
@@ -128,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
