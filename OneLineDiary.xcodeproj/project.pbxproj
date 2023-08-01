@@ -21,6 +21,7 @@
 		8B7F13072A777959006A6B39 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F13062A777959006A6B39 /* SearchCollectionViewController.swift */; };
 		8B7F130A2A777ADF006A6B39 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F13082A777ADF006A6B39 /* SearchCollectionViewCell.swift */; };
 		8B7F130B2A777ADF006A6B39 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F13092A777ADF006A6B39 /* SearchCollectionViewCell.xib */; };
+		8B7F133B2A789B5D006A6B39 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F133A2A789B5D006A6B39 /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8B7F13062A777959006A6B39 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		8B7F13082A777ADF006A6B39 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B7F13092A777ADF006A6B39 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B7F133A2A789B5D006A6B39 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				8B7F12E82A773A68006A6B39 /* SceneDelegate.swift */,
 				8B7F12EA2A773A68006A6B39 /* AddViewController.swift */,
 				8B7F12EC2A773A68006A6B39 /* Main.storyboard */,
+				8B7F133A2A789B5D006A6B39 /* SettingTableViewController.swift */,
 				8B7F13082A777ADF006A6B39 /* SearchCollectionViewCell.swift */,
 				8B7F13092A777ADF006A6B39 /* SearchCollectionViewCell.xib */,
 				8B7F12FC2A773BC4006A6B39 /* DiaryTableViewCell.swift */,
@@ -168,6 +171,7 @@
 				8B7F12EB2A773A68006A6B39 /* AddViewController.swift in Sources */,
 				8B7F13052A776257006A6B39 /* Extension+UIViewController.swift in Sources */,
 				8B7F12FE2A773BC4006A6B39 /* DiaryTableViewCell.swift in Sources */,
+				8B7F133B2A789B5D006A6B39 /* SettingTableViewController.swift in Sources */,
 				8B7F12FB2A773ACF006A6B39 /* DiaryTableViewController.swift in Sources */,
 				8B7F13032A775383006A6B39 /* DetailViewController.swift in Sources */,
 				8B7F12E72A773A68006A6B39 /* AppDelegate.swift in Sources */,

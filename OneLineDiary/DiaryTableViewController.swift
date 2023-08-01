@@ -17,8 +17,8 @@ class DiaryTableViewController: UITableViewController {
         setBackgroundColor()
         
         // XIB로 테이블뷰셀을 생성할 경우, 테이블뷰에 사용할 셀을 등록해주는 과정이 필요!
-        let nib = UINib(nibName: "DiaryTableViewCell", bundle: nil) // bundel: nil로 설정시 Navigation bar가 기본 경로로 지정됨
-        tableView.register(nib, forCellReuseIdentifier: "DiaryTableViewCell")
+        let nib = UINib(nibName: DiaryTableViewCell.identifier, bundle: nil) // bundel: nil로 설정시 Navigation bar가 기본 경로로 지정됨
+        tableView.register(nib, forCellReuseIdentifier: DiaryTableViewCell.identifier)
         
         
 //        tableView.backgroundColor = .clear
@@ -33,9 +33,9 @@ class DiaryTableViewController: UITableViewController {
         // Search 아이콘 클릭 시 SearchCollectionViewController Push!
         
         //1. 스토리보드 파일 찾기
-        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let sb = UIStoryboard(name: "Main", bundle: nil) // 이 코드는 vc에 storyboard? 코드로 대체 가능
         //2. 스토리보드 파일 내 뷰컨트롤러 찾기
-        let vc = sb.instantiateViewController(withIdentifier: "SearchCollectionViewController") as! SearchCollectionViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchCollectionViewController") as! SearchCollectionViewController
         
         // Push를 위해선 네비게이션뷰컨트롤러가 연결되어 있어야함
         navigationController?.pushViewController(vc, animated: true)
@@ -67,7 +67,7 @@ class DiaryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.indentifier) as? DiaryTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.identifier) as? DiaryTableViewCell else {
             return UITableViewCell()
         }
         
