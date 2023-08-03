@@ -50,6 +50,8 @@ class DiaryTableViewController: UITableViewController {
         //2. 스토리보드 파일 내 뷰컨트롤러 찾기
         let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController // 옵셔널 바인딩으로 바꿔보기...
         
+        vc.type = .add
+        
         //2-1(옵션). 네비게이션 컨트롤러가 있는 형태(제목바)로 Present 하고 싶은 경우
         //nav를 사용한다면, present와 화면 전환 방식도 nav로 수정해주어야 함!!
         let nav = UINavigationController(rootViewController: vc)
@@ -102,13 +104,18 @@ class DiaryTableViewController: UITableViewController {
         //present, DetailViewController(UIViewController) 생성해서 present 해보기!
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        // editView로 전환
+        let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
+        
+        vc.type = .edit
+        vc.contents = list[indexPath.row]
         
 //        vc.modalTransitionStyle = .coverVertical
-        vc.modalPresentationStyle = .automatic
+//        vc.modalPresentationStyle = .automatic
         
         //Pass Data 2. vc가 가지고 있는 프로퍼티에 데이터 추가
-        vc.contents = list[indexPath.row]
+//        vc.contents = list[indexPath.row]
         
         //인터페이스 빌더에서 생성하는 순서가 여기서 할당하는 순서보다 늦기 때문에 nil..
 //        vc.contentsLabel.text = list[indexPath.row]
