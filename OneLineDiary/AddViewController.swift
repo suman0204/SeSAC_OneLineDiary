@@ -7,17 +7,20 @@
 
 import UIKit
 
-enum TransitionType {
-    case add
-    case edit
+enum TransitionType: String {
+    case add = "추가 화면"
+    case edit = "수정 화면"
 }
 
 class AddViewController: UIViewController {
     
     var type: TransitionType = .add
     
-    var contents: String?
+    // 의미 없는 값을 넣어주는 것 보다 옵셔널로 놓기
+//    var contents: String?
 
+    var contents: String = ""
+    
     @IBOutlet var textView: UITextView!
     
     override func viewDidLoad() {
@@ -25,9 +28,12 @@ class AddViewController: UIViewController {
         
         setBackgroundColor()
         
+        title = type.rawValue
+        textView.text = contents
+
         switch type {
         case .add:
-            title = "추가 화면"
+            title = type.rawValue
             
             let xmark = UIImage(systemName: "xmark")
             
@@ -36,15 +42,15 @@ class AddViewController: UIViewController {
             
             navigationItem.leftBarButtonItem?.tintColor = .black
             
-//            textView.text = ""
             
         case .edit:
-            title = "수정 화면"
             
-            guard let contents else {
-                return
-            }
-            textView.text = contents
+            print("")
+            
+            //contents가 옵셔널일 때
+//            guard let contents else {
+//                return
+//            }
         }
             
 
