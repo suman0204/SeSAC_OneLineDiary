@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B61D6BD2A79F23300A9BC2F /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61D6BC2A79F23300A9BC2F /* TimelineViewController.swift */; };
+		8B61D6D02A7B72C100A9BC2F /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61D6CF2A7B72C100A9BC2F /* LottoViewController.swift */; };
 		8B7F12E72A773A68006A6B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12E62A773A68006A6B39 /* AppDelegate.swift */; };
 		8B7F12E92A773A68006A6B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12E82A773A68006A6B39 /* SceneDelegate.swift */; };
 		8B7F12EB2A773A68006A6B39 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F12EA2A773A68006A6B39 /* AddViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		8B61D6BC2A79F23300A9BC2F /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		8B61D6CF2A7B72C100A9BC2F /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = SOURCE_ROOT; };
 		8B7F12E32A773A68006A6B39 /* OneLineDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLineDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7F12E62A773A68006A6B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B7F12E82A773A68006A6B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		8B7F12E52A773A68006A6B39 /* OneLineDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8B61D6CF2A7B72C100A9BC2F /* LottoViewController.swift */,
 				8B7F13062A777959006A6B39 /* SearchCollectionViewController.swift */,
 				8B7F12E62A773A68006A6B39 /* AppDelegate.swift */,
 				8B7F12E82A773A68006A6B39 /* SceneDelegate.swift */,
@@ -179,6 +182,7 @@
 				8B7F12FB2A773ACF006A6B39 /* DiaryTableViewController.swift in Sources */,
 				8B7F13032A775383006A6B39 /* DetailViewController.swift in Sources */,
 				8B7F12E72A773A68006A6B39 /* AppDelegate.swift in Sources */,
+				8B61D6D02A7B72C100A9BC2F /* LottoViewController.swift in Sources */,
 				8B7F12E92A773A68006A6B39 /* SceneDelegate.swift in Sources */,
 				8B7F130A2A777ADF006A6B39 /* SearchCollectionViewCell.swift in Sources */,
 			);
