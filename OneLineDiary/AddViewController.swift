@@ -75,7 +75,7 @@ class AddViewController: UIViewController, UITextViewDelegate {
     //플레이스 홀더와 텍스트뷰 글자가 같다면 clear, color
     func textViewDidBeginEditing(_ textView: UITextView) {
         print(#function)
-        if textView.text == placeholderText {
+        if textView.textColor == .lightGray {
             textView.text = nil
             textView.textColor = .black
         }
