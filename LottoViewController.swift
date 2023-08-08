@@ -10,20 +10,24 @@ import Alamofire
 import SwiftyJSON
 
 class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-        
-    @IBOutlet var numberTextField: UITextField!
     
+    @IBOutlet var guideLabel: UILabel!
+    @IBOutlet var numberTextField: UITextField!
+    @IBOutlet var lottoInfoLabel: UILabel!
+    
+    @IBOutlet var numberLabelCollection: [UILabel]!
     @IBOutlet var bonusNumberLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
     
     let pickerView = UIPickerView()
 //    @IBOutlet var pickerView: UIPickerView!
     
-    var list: [Int] = Array(1...1100).reversed() //Array(repeating: 100, count: 10)
+    var list: [Int] = Array(1...1079).reversed() //Array(repeating: 100, count: 10)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guideLabel.text = "회차를 선택해주세요"
+        numberTextField.text = "회차를 선택해보세요!"
         print("1")
         print("2")
         callRequest(number: 1079)
@@ -46,13 +50,29 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
-                print("3")
-                let data = json["drwNoDate"].stringValue
-                let bonusNumber = json["bnusNo"].intValue
+//                print("3")
+                let drawNumberList = [
+                    json["drwtNo1"].intValue,
+                    json["drwtNo2"].intValue,
+                    json["drwtNo3"].intValue,
+                    json["drwtNo4"].intValue,
+                    json["drwtNo5"].intValue,
+                    json["drwtNo6"].intValue,
+                    
+                ]
                 
-                print(data, bonusNumber)
-                self.dateLabel.text = data
-                self.bonusNumberLabel.text = "\(bonusNumber)번"
+                let bonusNumber = json["bnusNo"].intValue
+
+                let date = json["drwNoDate"].stringValue
+                
+                print(date, bonusNumber)
+                
+                
+                self.lottoInfoLabel.text = "\(number)회차 (\(date))"
+                for index in 0...5 {
+                    self.numberLabelCollection[index].text = "\(drawNumberList[index])"
+                }
+                self.bonusNumberLabel.text = "\(bonusNumber)"
                 
             case .failure(let error):
                 print(error)
